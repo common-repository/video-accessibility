@@ -1,0 +1,18 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/media",
+	"title": "Media",
+	"description": "",
+	"category": "embed",
+	"parent": [
+		"video-accessibility/block"
+	],
+	"supports": {
+		"className": false,
+		"align": false
+	},
+	"usesContext": [
+		"video-accessibility/currentMedia"
+	],
+	"editorScript": "file:index.js"
+}

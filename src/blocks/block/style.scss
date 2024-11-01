@@ -1,0 +1,193 @@
+.video-accessibility {
+
+	&__media {
+		&[hidden] {
+			iframe,
+			video {
+				display: none;
+			}
+		}
+
+		figure {
+			margin: 0;
+		}
+	}
+
+	&__controls:not(.wp-block),
+	&__controls.wp-block > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		font-size: 1rem;
+		display: flex;
+		gap: var(--wp--style--block-gap, 2em);
+		flex-wrap: wrap;
+	}
+
+	&__control {
+		flex: 1;
+		max-width: 50%;
+		display: flex;
+		align-items: stretch;
+		justify-content: stretch;
+		border-radius: 10px;
+
+		&.has-background button.wp-block-button__link {
+			color: inherit;
+		}
+
+		button.wp-block-button__link {
+			height: 100%;
+			align-items: center;
+			appearance: none;
+			cursor: pointer;
+			font-size: inherit;
+			gap: calc( var( --wp--style--block-gap ) / 2 );
+			padding: 1rem;
+			display: flex;
+			text-align: left;
+			flex: 1 1 100%;
+			z-index: 1;
+
+			&:focus {
+				outline: 4px solid Highlight;
+			}
+		}
+	}
+
+	&__icon {
+		flex: none;
+
+		svg {
+			fill: currentColor;
+		}
+	}
+
+	&__control-text {
+		flex-grow: 1;
+		overflow-wrap: break-word;
+		word-break: normal;
+	}
+
+	&__aside:not(.wp-block),
+	&__aside.wp-block > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: stretch;
+		height: 100%;
+		box-sizing: border-box;
+
+
+		> * {
+			box-sizing: border-box;
+			height: 100%;
+		}
+
+		> .video-accessibility__panel {
+
+			.video-accessibility--no-default & {
+				display: none;
+			}
+		}
+	}
+
+	&__panel {
+		max-height: 300px ;
+		padding: var(--wp--style--block-gap, 2em);
+		border: 1px solid rgba(0,0,0,.25);
+		overflow: auto;
+		box-sizing: border-box;
+		//var(--wp--preset--color--black, $vs-border-color); consider adding $vs-border-color to plugin defaults controlled in settings
+
+		>:first-child, .video-accessibility__statement > :first-child {
+			margin-top: 0;
+		}
+
+		&-heading {
+			font-size: 1em;
+		}
+		> p {
+			font-size: 1.2rem;
+			//consider variable
+		}
+	}
+
+	&--1c {
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--style--block-gap, 2em);
+
+	}
+
+	&--2c:not(.wp-block),
+	&--2c.wp-block > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: grid;
+		gap: var( --wp--style--block-gap, 2em );
+	}
+
+	@media (max-width: 600px) {
+		&__controls {
+			flex-wrap: wrap;
+		}
+		&__control {
+			max-width: 100%;
+		}
+	}
+
+	@media ( min-width: 782px ) {
+		&--2c:not(.wp-block),
+		&--2c.wp-block > .block-editor-inner-blocks > .block-editor-block-list__layout {
+			grid-template-columns: minmax( 0, calc( 67% - var( --wp--style--block-gap, 2em ) ) ) 33%;
+			grid-template-rows: 1fr auto;
+
+			> .video-accessibility {
+				&__media {
+					grid-column: 1 / 1;
+					grid-row: 1 / 1;
+				}
+
+				&__controls {
+					grid-column: 2 / 1;
+				}
+
+				&__aside {
+					grid-column: 2 / 2;
+					grid-row: 1 / span 2;
+
+					.video-accessibility__panel {
+						height: var(--vs-panel-max-height);
+						max-height: none;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+.a11y,
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	border: 0;
+
+	&--focusable {
+
+		&:active,
+		&:active {
+			position: static;
+			width: auto;
+			height: auto;
+			overflow: visible;
+			clip: auto;
+			white-space: normal;
+			-webkit-clip-path: none;
+			clip-path: none;
+		}
+	}
+}

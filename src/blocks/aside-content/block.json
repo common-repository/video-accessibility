@@ -1,0 +1,17 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/aside-content",
+	"title": "Aside Default",
+	"description": "Default sidebar panel content.",
+	"category": "embed",
+	"parent": [ "video-accessibility/aside" ],
+	"supports": {
+		"className": false,
+		"color": false
+	},
+	"attributes": {},
+	"usesContext": [
+		"video-accessibility/currentPanel"
+	],
+	"editorScript": "file:index.js"
+}

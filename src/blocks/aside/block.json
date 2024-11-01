@@ -1,0 +1,18 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/aside",
+	"title": "Aside",
+	"description": "Video accessibility aside",
+	"category": "embed",
+	"supports": {
+		"className": false,
+		"align": true,
+		"color": true
+	},
+	"parent": [ "video-accessibility/block" ],
+	"usesContext": [
+		"video-accessibility/currentPanel"
+	],
+	"attributes": {},
+	"editorScript": "file:index.js"
+}

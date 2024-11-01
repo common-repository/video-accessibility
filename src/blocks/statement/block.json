@@ -1,0 +1,25 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/statement",
+	"title": "Accessibility Statement",
+	"description": "Accessibility statement generated from the settings page.",
+	"category": "embed",
+	"parent": [
+		"video-accessibility/panel",
+		"video-accessibility/aside-default"
+	],
+	"supports": {
+		"className": false
+	},
+	"attributes": {
+		"custom": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"usesContext": [
+		"video-accessibility/statement/blockId"
+	],
+	"render": "file:render.php",
+	"editorScript": "file:index.js"
+}

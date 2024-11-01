@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/secondary",
+	"title": "Secondary video",
+	"description": "The video that will display upon toggle button click",
+	"category": "embed",
+	"parent": [
+		"video-accessibility/media"
+	],
+	"supports": {
+		"className": false
+	},
+	"attributes": {},
+	"editorScript": "file:index.js"
+}

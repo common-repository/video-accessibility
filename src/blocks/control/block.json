@@ -1,0 +1,45 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/control",
+	"title": "Control",
+	"description": "Video accessibility panel control",
+	"category": "media",
+	"supports": {
+		"className": false,
+		"align": false,
+		"color": true,
+		"__experimentalExposeControlsToChildren": true
+	},
+	"attributes": {
+		"text": {
+			"type": "string"
+		},
+		"switchText": {
+			"type": "string"
+		},
+		"icon": {
+			"type": "string",
+			"enum": [
+				"",
+				"audio-described",
+				"transcript",
+				"info"
+			]
+		},
+		"control": {
+			"type": "string",
+			"enum": [
+				"panel",
+				"switch"
+			],
+			"default": "panel"
+		}
+	},
+	"usesContext": [
+		"video-accessibility/currentMedia",
+		"video-accessibility/currentPanel"
+	],
+	"parent": [ "video-accessibility/controls" ],
+	"editorScript": "file:index.js",
+	"render": "file:render.php"
+}

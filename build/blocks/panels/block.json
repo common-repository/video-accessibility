@@ -1,0 +1,20 @@
+{
+  "apiVersion": 2,
+  "name": "video-accessibility/panels",
+  "title": "Panels",
+  "description": "Video accessibility panels",
+  "category": "embed",
+  "supports": {
+    "className": false,
+    "align": true,
+    "color": true
+  },
+  "parent": [
+    "video-accessibility/aside"
+  ],
+  "usesContext": [
+    "video-accessibility/currentPanel"
+  ],
+  "attributes": {},
+  "editorScript": "file:index.js"
+}

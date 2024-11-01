@@ -1,0 +1,20 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/panel",
+	"title": "Panel",
+	"description": "Allows for a button triggering expanded/collapsed rich text content.",
+	"category": "embed",
+	"parent": [
+		"video-accessibility/aside",
+		"video-accessibility/panels"
+	],
+	"supports": {
+		"className": false,
+		"color": false
+	},
+	"attributes": {},
+	"usesContext": [
+		"video-accessibility/currentPanel"
+	],
+	"editorScript": "file:index.js"
+}

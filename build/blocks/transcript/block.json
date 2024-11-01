@@ -1,0 +1,29 @@
+{
+  "apiVersion": 2,
+  "name": "video-accessibility/transcript",
+  "title": "Transcript",
+  "description": "Transcript within a video accessibility block.",
+  "category": "embed",
+  "parent": [
+    "video-accessibility/panel",
+    "video-accessibility/aside-default"
+  ],
+  "supports": {
+    "className": true
+  },
+  "attributes": {
+    "file": {
+      "type": "number"
+    },
+    "displayDownloadBtn": {
+      "type": "boolean",
+      "default": false
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Download transcript"
+    }
+  },
+  "render": "file:render.php",
+  "editorScript": "file:index.js"
+}

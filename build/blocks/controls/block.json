@@ -1,0 +1,28 @@
+{
+  "apiVersion": 2,
+  "name": "video-accessibility/controls",
+  "title": "Controls",
+  "description": "Video accessibility panel controls",
+  "category": "embed",
+  "supports": {
+    "className": false,
+    "align": false
+  },
+  "attributes": {
+    "primaryText": {
+      "type": "string",
+      "default": "Switch to video with audio descriptions"
+    },
+    "secondaryText": {
+      "type": "string",
+      "default": "Switch to video without audio descriptions"
+    }
+  },
+  "usesContext": [
+    "video-accessibility/currentPanel"
+  ],
+  "parent": [
+    "video-accessibility/block"
+  ],
+  "editorScript": "file:index.js"
+}

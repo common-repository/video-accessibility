@@ -1,0 +1,12 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/primary",
+	"title": "Primary",
+	"description": "The video that will initially be displayed.",
+	"category": "embed",
+	"parent": [ "video-accessibility/media" ],
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:index.js"
+}

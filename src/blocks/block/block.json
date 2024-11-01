@@ -1,0 +1,54 @@
+{
+	"apiVersion": 2,
+	"name": "video-accessibility/block",
+	"title": "Video accessibility",
+	"description": "An video accessibility block",
+	"category": "embed",
+	"supports": {
+		"className": false,
+		"align": true,
+		"__experimentalExposeControlsToChildren": true
+	},
+	"attributes": {
+		"layout": {
+			"type": "string",
+			"default": "2c",
+			"enum": [
+				"1c",
+				"2c"
+			]
+		},
+		"currentPanel": {
+			"type": "integer",
+			"default": 0
+		},
+		"currentMedia": {
+			"type": "integer",
+			"default": 0
+		},
+		"displayDefault": {
+			"type": "boolean",
+			"default": true
+		},
+		"displayScreenReaderText": {
+			"type": "boolean",
+			"default": false
+		},
+		"primaryScreenReaderText": {
+			"type":"string",
+			"default":"Switch to video with audio description by using the switch toggle button located after the video controls"
+		},
+		"secondaryScreenReaderText": {
+			"type":"string",
+			"default":"Switch to video without audio description by using the switch toggle button located after the video controls"
+		}
+	},
+	"providesContext": {
+		"video-accessibility/currentPanel": "currentPanel",
+		"video-accessibility/currentMedia": "currentMedia"
+	},
+	"editorScript": "file:index.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css",
+	"viewScript": "file:view-script.js"
+}
